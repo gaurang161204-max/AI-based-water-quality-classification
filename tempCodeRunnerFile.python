@@ -1,0 +1,46 @@
+from influxdb_client import InfluxDBClient
+
+
+url = "https://us-east-1-1.aws.cloud2.influxdata.com/orgs/a47909344873dc31"
+token = "DMv8zXGC929QI6VNYaznoi0JVg3eUoaKW-Gr3XvreRYjpZol_hNKufSSVyhe4jifbomlOTA9VIXuYTHaaT2pAA=="
+org = "WaterQuality"
+bucket = "YOUR_BUCKET"
+
+client = InfluxDBClient(
+    url=url,
+    token=token,
+    org=org
+)
+
+try:
+    health = client.health()
+    print("InfluxDB connection successful!")
+    print("Status:", health.status)
+
+except Exception as e:
+    print("Connection failed!")
+    print(e)
+
+finally:
+    client.close()"
+token = "YOUR_INFLUXDB_TOKEN"
+org = "YOUR_ORGANIZATION"
+bucket = "YOUR_BUCKET"
+
+client = InfluxDBClient(
+    url=url,
+    token=token,
+    org=org
+)
+
+try:
+    health = client.health()
+    print("InfluxDB connection successful!")
+    print("Status:", health.status)
+
+except Exception as e:
+    print("Connection failed!")
+    print(e)
+
+finally:
+    client.close()
