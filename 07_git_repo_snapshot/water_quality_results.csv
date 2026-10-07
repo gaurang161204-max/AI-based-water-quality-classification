@@ -1,0 +1,11 @@
+Sample,pH,Turbidity,TDS,Temperature,AI_Output
+Sample 1,7.1,2,250,24,Normal
+Sample 2,7.4,3,280,25,Normal
+Sample 3,6.8,8,320,26,Normal
+Sample 4,6.2,15,450,28,Abnormal
+Sample 5,5.7,25,650,30,Abnormal
+Sample 6,7.0,4,270,24,Normal
+Sample 7,7.6,5,300,25,Normal
+Sample 8,6.5,18,500,29,Abnormal
+Sample 9,8.2,22,700,31,Abnormal
+Sample 10,7.2,3,260,24,Normal

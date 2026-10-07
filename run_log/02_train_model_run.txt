@@ -1,0 +1,31 @@
+Command: python train_model.py
+Working dir: 01_ml_model/schema_simple_binary/ (water_quality.csv = correct-schema copy)
+
+Output:
+Model Accuracy: 1.0
+Model saved as model.pkl
+
+Note: accuracy of 1.0 is a dataset-size artifact, not evidence of a working model —
+see FINDINGS_AND_STRATEGY.md section 2. water_quality.csv has only 11 rows.
+
+---
+
+Command: python -c "pd.read_csv('water_quality_LOWERCASE_SCHEMA_INCOMPATIBLE.csv'); X = data[['pH','Turbidity','TDS','Temperature']]"
+
+Output:
+COLUMN MISMATCH ERROR: KeyError "None of [Index(['pH', 'Turbidity', 'TDS', 'Temperature'], dtype='str')] are in the [columns]"
+
+Confirms: running train_model.py from python1/ root (where water_quality.csv has lowercase
+columns: ph,turbidity,temperature,tds,label) crashes immediately. It only works because the
+version in python1/waterQalityai/water_quality.csv happens to have the right capitalization.
+
+---
+
+Command: python -c "import paho.mqtt.client as mqtt; mqtt.Client()"
+
+Output:
+DeprecationWarning: Callback API version 1 is deprecated, update to latest version
+Client() with no args: OK (no error)
+
+Confirms: MQTT code in this project runs today on the installed paho-mqtt 2.1.0, but uses the
+deprecated v1 callback API and will break on a future paho-mqtt major version bump.

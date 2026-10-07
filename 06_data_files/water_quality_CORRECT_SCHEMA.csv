@@ -1,0 +1,13 @@
+pH,Turbidity,Temperature,TDS,Label
+7.1,2.1,25.2,300,Normal
+7.3,1.8,26.1,280,Normal
+6.9,3.0,24.8,320,Normal
+7.0,2.5,25.5,310,Normal
+7.2,2.0,26.0,290,Normal
+6.8,4.0,27.0,350,Normal
+5.1,15.0,30.0,800,Abnormal
+4.8,20.0,31.0,900,Abnormal
+5.5,12.5,29.0,750,Abnormal
+8.9,18.0,32.0,850,Abnormal
+9.2,22.0,33.0,950,Abnormal
+4.5,25.0,30.5,1000,Abnormal
